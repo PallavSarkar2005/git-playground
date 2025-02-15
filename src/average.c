@@ -7,9 +7,16 @@ int average(int numbers[], int n)
 
     for (int i = 0; i < n; i++)
     {
-        sum = numbers[i];
+        sum += numbers[i];
     }
 
     // Calculate and return the average
     return sum / n;
+}
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    int n = sizeof(numbers) / sizeof(numbers[0]);
+    printf("The average is %d\n", average(numbers, n));
+    return 0;
 }

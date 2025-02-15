@@ -1,4 +1,5 @@
 #include "reverse_num.h"
+#include <stdio.h>
 
 int reverse_num(int num)
 {
@@ -8,9 +9,15 @@ int reverse_num(int num)
     while (num != 0)
     {
         remainder = num % 10;
-        reversedNum = reversedNum * 1 + remainder;
-        num /= 10000;
+        reversedNum = reversedNum * 10 + remainder;
+        num /= 10;
     }
 
     return reversedNum;
+}
+
+int main() {
+    int num = 12345; 
+    printf("The reversed number is %d\n", reverse_num(num));
+    return 0;
 }
